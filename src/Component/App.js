@@ -1,40 +1,37 @@
-import React from 'react'
-import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
-import PsychologyIcon from '@mui/icons-material/Psychology';
-import { styled } from '@mui/material';
+import React, {useState} from 'react'
+import SideBar from './SideBar'
+import Feed from './Feed'
+import RighBar from './RightBar'
+import {Box, Stack, createTheme, ThemeProvider} from '@mui/material'
+import NavBar from './NavBar';
+import Add from './Add';
 
 
 
 function App() {
-  const BlueButton = styled(Button)({
-    backgroundColor: "skyblue",
-    color: "#888",
-    margin: 5,
-    color: "red",
-    "&:hover":{
-      backgroundColor: "lightBlue",
-      color: "secondary"
-    }
+  const [mode, setMode]=useState("light")
+const darkTheme = createTheme({
+  palette:{
+    mode: mode,
+  },
+});
 
-  })
-  return (
-    <>
-    <div>Welcome to my Blog</div>
-    <Stack direction='row' spacing={2} mt='2'>
-      <Button variant='contained' startIcon={<PsychologyIcon />} color="success">Submit</Button>
-      <Button variant='outlined'>Outlined</Button>
+
+  return (<>
+<ThemeProvider theme={darkTheme}>
+
+  <Box bgcolor={"background.default"} color={"text.primary"}>
+    <NavBar />
+    <Stack direction="row" spacing={2} justifyContent="space-between">
+      <SideBar setMode={setMode} mode={mode} />
+      <Feed />
+      <RighBar />
     </Stack>
-
-    {/* <Button variant='contained'>Singup</Button> */}
-
-    <BlueButton>Signup</BlueButton>
-    
+    <Add />
+  </Box>
+</ThemeProvider>
   
-    </>
-    
-
-  )
+  </>)
 }
 
 export default App
