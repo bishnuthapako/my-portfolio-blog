@@ -45,10 +45,10 @@ const [open, setOpen]=useState(false)
      <Typography variant='h6' color="grey" textAlign="center">Create Post</Typography>   
     <UserBox>
     <Avatar 
-     src="https://randomuser.me/api/portraits/women/47.jpg"
+     src="https://randomuser.me/api/portraits/women/33.jpg"
      sx={{width: 30, height:30}}
      />
-     <Typography fontWeight={500} variant="span">Remy Sharp</Typography>
+     <Typography fontWeight={500} variant="span">ann hunt</Typography>
     </UserBox>
     <TextField
           id="standard-multiline-static"

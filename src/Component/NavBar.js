@@ -51,11 +51,11 @@ function NavBar() {
                 <Avatar 
                 sx={{width: 30, height: 30}} 
                 onClick={()=>setOpen(true)}
-                src="https://randomuser.me/api/portraits/women/59.jpg"
+                src="https://randomuser.me/api/portraits/women/33.jpg"
                 />
             </Icons>
                 <UserBox onClick={()=>setOpen(true)}>
-                        <Avatar sx={{width: 30, height: 30}} src="https://randomuser.me/api/portraits/women/59.jpg"/>
+                        <Avatar sx={{width: 30, height: 30}} src="https://randomuser.me/api/portraits/women/33.jpg"/>
                         <Typography variant='span'>Bishnu</Typography>
                 </UserBox>
         </StyledToolbar>
